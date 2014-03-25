@@ -1,0 +1,149 @@
+*{
+	font-family: sans-serif;
+	color: rgb(88, 89, 90);
+}
+
+li {
+	padding: .1em 0;
+	font-size: 1.2em;
+}
+
+#name {
+	font-size: 3em;
+	color: rgb(44, 138, 182);
+	padding: 10px 0;
+}
+
+#address{
+	margin-bottom: 0;
+	font-size: 1.2em;
+}
+#address a {
+	text-decoration: none;
+	color: rgb(88, 89, 90);
+}
+
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: -10px;
+	margin-bottom: 30px;
+	width: 960px;
+	border-bottom: 1px solid rgb(112, 112, 112);
+}
+
+.header{
+	margin: 10px 0;
+	padding: 10px 0;
+}
+.intro{
+	clear: both;
+	margin: 5px 0 5px 0;
+	padding: 15px 0;
+	text-align: justify;
+	border-top: 1px solid rgb(112, 112, 112);
+	border-bottom: 1px solid rgb(112, 112, 112);
+}
+
+#intro_h3{
+		line-height: 1.5em;
+		margin: 0;
+		color: #414242;
+}
+
+#top_left {
+	float: left;
+	margin: 5px 0;
+}
+
+#top_right {
+	float: right;
+	text-align: right;
+	margin: 5px 0;
+	padding: 10px 0;
+}
+
+
+.left_col {
+	margin: 5px 0;
+	width: 240px;
+	float: left;
+}
+
+#skill_list {
+	width: 200px;
+	margin-left: 0;
+    padding-left: 20px;
+}
+
+.title_tag {
+	margin: 5px 0;
+	font-size: 1.1em;
+	color: rgb(44, 138, 182);
+	font-size: 1.8em;
+}
+#last_tag{
+	margin-top: 15px;
+	margin-right: 20px;
+	padding-top: 14px;
+	border-top: 1px solid rgb(112, 112, 112);
+}
+
+#stand_out {
+	color: rgb(44, 138, 182);
+	font-style: italic;
+}
+
+#edu_list {
+	width: 200px;
+	margin: 0;
+	padding: .3em 0;
+	font-size: 1.2em;
+}
+#second_item_edu_list{
+	padding: 10px 40px 2.5px 0;
+		font-size: 1.2em;
+
+}
+
+.right_col {
+	margin: 5px 0;
+	width: 720px;
+	float: right;
+}
+ .we_items{
+ 	margin: 5px 0;
+ 	padding: 5px 0;
+ 	font-size: 1.2em;
+ }
+
+ .we_items_last{
+ 	margin: 5px 0 15px 0;
+ 	padding: 5px 0;
+ 	font-size: 1.2em;
+ }
+
+.title_float_left {
+	float: left;
+	font-weight: bold;
+	margin: 0 0 0 0;
+	font-size: 1.3em;}
+
+.float_right {
+	float: right;
+	margin: 0 0 0 0;
+	font-size: 1.2em;
+
+}
+
+.company_location {
+	clear: both;
+	font-style: italic;
+	margin: 0;
+	font-size: 1.2em;
+}
+
+.clear {
+	clear: both;
+}
