@@ -212,12 +212,9 @@ hr {
 .logo-ale {
     max-width: 49px;
     float: left;
-    margin: 20px 5px;
+    margin: 20px 0;
 }
 
-.logo-ul {
-    padding-left: 10px !important;
-}
-
-.nav-ul {
+.main-nav {
+    background-color: #0d9061;
 }

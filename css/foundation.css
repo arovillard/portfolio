@@ -1029,7 +1029,7 @@ meta.foundation-mq-topbar {
         font-weight: normal;
         color: white;
         display: block;
-        margin: 9px 5px; }
+        margin: 9px 0; }
   .top-bar .toggle-topbar {
     position: absolute;
     right: 0;
@@ -1086,7 +1086,6 @@ meta.foundation-mq-topbar {
     width: 100%;
     height: auto;
     display: block;
-    padding-top: 10px;
     font-size: 16px;
     margin: 0; }
   .top-bar-section .divider,
@@ -1251,7 +1250,7 @@ meta.foundation-mq-topbar {
       color: white; }
     .top-bar-section li:not(.has-form) a:not(.button) {
       padding: 0 15px;
-      line-height: 45px;
+      line-height: 65px;
       background: #0d9061; }
       .top-bar-section li:not(.has-form) a:not(.button):hover {
         background: #077F53; }

@@ -48,7 +48,7 @@
       slides_container.wrap('<div class="'+settings.container_class+'"></div>');
       container = slides_container.parent();
       slides_container.addClass(settings.slides_container_class);
-      
+
       if (settings.navigation_arrows) {
         container.append($('<a href="#"><span></span></a>').addClass(settings.prev_class));
         container.append($('<a href="#"><span></span></a>').addClass(settings.next_class));
@@ -86,15 +86,15 @@
     self._prepare_direction = function(next_idx, current_direction) {
       var dir = 'next';
       if (next_idx <= idx) { dir = 'prev'; }
-      
-      if (settings.animation === 'slide') {    
+
+      if (settings.animation === 'slide') {
         setTimeout(function(){
           slides_container.removeClass("swipe-prev swipe-next");
           if (dir === 'next') {slides_container.addClass("swipe-next");}
           else if (dir === 'prev') {slides_container.addClass("swipe-prev");}
         },0);
       }
-      
+
       var slides = self.slides();
       if (next_idx >= slides.length) {
         if (!settings.circular) return false;
@@ -105,7 +105,7 @@
       }
       var current = $(slides.get(idx))
         , next = $(slides.get(next_idx));
-      
+
 
       return [dir, current, next, next_idx];
     };
@@ -115,7 +115,7 @@
       if (self.cache.animating) {return false;}
       if (next_idx === idx) {return false;}
       if (typeof self.cache.timer === 'object') {self.cache.timer.restart();}
-      
+
       var slides = self.slides();
       self.cache.animating = true;
       var res = self._prepare_direction(next_idx)
@@ -130,7 +130,7 @@
 
       current.css("transitionDuration", settings.animation_speed+"ms");
       next.css("transitionDuration", settings.animation_speed+"ms");
-      
+
       var callback = function() {
         var unlock = function() {
           if (start_timer === true) {self.cache.timer.restart();}
@@ -142,7 +142,7 @@
           setTimeout(function(){
             self.cache.animating = false;
           }, 100);
-          
+
         };
         if (slides_container.height() != next.height() && settings.variable_height) {
           slides_container.animate({'height': next.height()}, 250, 'linear', unlock);
@@ -155,7 +155,7 @@
 
       var start_animation = function() {
         if (dir === 'next') {animate.next(current, next, callback);}
-        if (dir === 'prev') {animate.prev(current, next, callback);}        
+        if (dir === 'prev') {animate.prev(current, next, callback);}
       };
 
       if (next.height() > slides_container.height() && settings.variable_height) {
@@ -164,7 +164,7 @@
         start_animation();
       }
     };
-    
+
     self.next = function(e) {
       e.stopImmediatePropagation();
       e.preventDefault();
@@ -173,7 +173,7 @@
         self._goto(idx + 1);
     }, 100);
     };
-    
+
     self.prev = function(e) {
       e.stopImmediatePropagation();
       e.preventDefault();
@@ -196,7 +196,7 @@
       }
     };
 
-    self.link_bullet = function(e) {    
+    self.link_bullet = function(e) {
       var index = $(this).attr('data-orbit-slide');
       if ((typeof index === 'string') && (index = $.trim(index)) != "") {
         if(isNaN(parseInt(index)))
@@ -221,7 +221,7 @@
     self.timer_callback = function() {
       self._goto(idx + 1, true);
     }
-    
+
     self.compute_dimensions = function() {
       var current = $(self.slides().get(idx));
       var h = current.height();
@@ -235,8 +235,8 @@
 
     self.create_timer = function() {
       var t = new Timer(
-        container.find('.'+settings.timer_container_class), 
-        settings, 
+        container.find('.'+settings.timer_container_class),
+        settings,
         self.timer_callback
       );
       return t;
@@ -250,7 +250,7 @@
       var t = container.find('.'+settings.timer_container_class);
       if (t.hasClass(settings.timer_paused_class)) {
         if (typeof self.cache.timer === 'undefined') {self.cache.timer = self.create_timer();}
-        self.cache.timer.start();     
+        self.cache.timer.start();
       }
       else {
         if (typeof self.cache.timer === 'object') {self.cache.timer.stop();}
@@ -260,11 +260,11 @@
     self.init = function() {
       self.build_markup();
       if (settings.timer) {
-        self.cache.timer = self.create_timer(); 
+        self.cache.timer = self.create_timer();
         Foundation.utils.image_loaded(this.slides().children('img'), self.cache.timer.start);
       }
       // animate = new FadeAnimation(settings, slides_container);
-      // if (settings.animation === 'slide') 
+      // if (settings.animation === 'slide')
       //   animate = new SlideAnimation(settings, slides_container);
       if(settings.animation === 'fade') {slides_container.addClass('fade');}
       animate = new CSSAnimation(settings, slides_container);
@@ -286,8 +286,8 @@
           self.cache.delta_x = 0;
           self.cache.is_scrolling = null;
           self.cache.direction = null;
-          
-          self.stop_timer(); // does not appear to prevent callback from occurring          
+
+          self.stop_timer(); // does not appear to prevent callback from occurring
         })
         .on('touchmove.fndtn.orbit',function(e) {
           if (self.cache.animating) {return;}
@@ -305,7 +305,7 @@
             }
 
             if (self.cache.is_scrolling) {return;}
-            
+
             var direction = (self.cache.delta_x < 0) ? (idx+1) : (idx-1);
             if (self.cache.direction !== direction) {
               var res = self._prepare_direction(direction);
@@ -317,7 +317,7 @@
 
             if (settings.animation === 'slide') {
               var offset, next_offset;
-              
+
               offset = (self.cache.delta_x / container.width()) * 100;
               if (offset >= 0) {next_offset = -(100 - offset);}
               else {next_offset = 100 + offset;}
@@ -346,7 +346,7 @@
           self.cache.timer.start();
         }
       });
-      
+
       $(document).on('click', '[data-orbit-link]', self.link_custom);
       $(window).on('resize', self.compute_dimensions);
       Foundation.utils.image_loaded(this.slides().children('img'), self.compute_dimensions);
@@ -365,7 +365,7 @@
     var self = this,
         duration = settings.timer_speed,
         progress = el.find('.'+settings.timer_progress_class),
-        start, 
+        start,
         timeout,
         left = -1;
 
@@ -420,7 +420,7 @@
         callback();
       });
       container.children().css({
-        "transform":"", 
+        "transform":"",
         "transitionDuration":""
       });
       current.addClass("animate-out");
@@ -509,5 +509,5 @@
     }
   };
 
-    
+
 }(jQuery, this, this.document));
