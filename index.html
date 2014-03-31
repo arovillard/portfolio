@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/vendor/modernizr.js"></script>
   </head>
@@ -27,10 +28,10 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right nav-ul">
-<!--             <li><a class="float-right margin-left" href="#my-story">My Story</a></li> -->
-            <li><a  href="./resume/resume.html" target="_blank">Resume</a></li>
+            <li><a class="float-right margin-left" href="#my-story">My Story</a></li>
             <li><a href="#my-projects">Projects</a></li>
             <li><a  href="#contact-me">Contact</a></li>
+            <li><a  href="./resume/resume.html" target="_blank">Resume</a></li>
           </ul>
         </section>
       </nav>
@@ -42,36 +43,64 @@
       </div>
       <div class="image-large hide-for-small">
         <img src="./img/ale_lake1.jpg">
-        <div class="lema">
-          <p>I believe in fostering a product’s vision, never fearing to innovate while investing in the user’s interaction and product integrity.</p>
+        <div class="lema row">
+          <p>I believe in fostering a product’s vision, never hesitating to innovate while investing in the user’s interaction and product integrity.</p>
+        </div>
+        <div class="arrow-container">
+          <a href="#my-story"><div class="arrow-pic"><i class="fa fa-chevron-down fa-4x"></i></div></a>
         </div>
       </div>
     </section>
 
     <section class="row" name="my-story" id="my-story">
-      <div class="">
-        <div class="my-story-mobile">
-          <p>
-            Hi, I'm Alejandro Rovillard, a Ruby on Rails and Front-end developer living in Toronto. See my <a href="#my-projects">latest work</a>, read my <a href="http://www.tumblr.com/blog/arovillard">thoughts about coding</a> and follow me on twitter <a href="https://twitter.com/arovillard">@arovillard</a>.
-          </p>
-          <p id="read-more"><a>read more</a></p>
-          <p id="read-less" class="hide"><a>read less</a></p>
-        </div>
+      <div class="my-story-mobile">
+        <p>
+          Hi, I'm Alejandro Rovillard, a Ruby on Rails and Front-end developer living in Toronto. See my <a href="#my-projects" target="_blank">latest work</a>, read my <a href="http://www.tumblr.com/blog/arovillard" target="_blank">thoughts about coding</a> and follow me on twitter <a href="https://twitter.com/arovillard" target="_blank">@arovillard</a>.
+        </p>
+        <p id="read-more"><a>Read more</a></p>
         <div id="my-story-hidden" class="my-story hide">
           <p>
             From a very early age, I was always building things and breaking toys open to figure out how they were built and what else I could invent with the parts. Following my passion and curiosity, I earned a degree in Mechanical Engineering which gave me the foundation for being able to understand complex problems and come up with creative solutions.<br><br>I spent years exploring software and the web, but it wasn’t until I ran operations at a small startup that I became fully aware of my passion for software development and the impact my contribution can have to a company and to the community. I believe that software should be practical and improve our lives in a meaningful way. I’m excited to work with an amazing team that is like minded and can help build the future with me one amazing product at a time.
           </p>
+          <p id="read-less" class="hide"><a>Read less</a></p>
         </div>
       </div>
     </section>
     <!-- end of about me section -->
 
+<!-- Start of testimony  -->
+<section class="testimony">
+  <div class="row">
+    <div class="testimonies">
+      <div class="picture-quote small-12 medium-3 column">
+        <img src="./img/peteposes4x4.jpg">
+      </div>
+      <div class="testimony-text small-12 medium-9 column">
+        <blockquote><p>"Ale immediately impressed me with his broad, multi-disciplinary approach to business and technology. My first thought was, 'How can I get this guy involved in my projects?' — and he's only grown his skill-set since then." <br><cite>Pete Forde</cite></p></blockquote>
+      </div>
+    </div>
+    <div class="clear-both"></div>
+    <div class="testimonies">
+      <div class="picture-quote small-12 medium-3 column">
+        <img src="./img/profile-alyssa.jpg">
+      </div>
+      <div class="testimony-text small-12 medium-9 column">
+        <blockquote><p>"Alejandro is a talented young professional who is very comfortable taking ownership in ambiguous situations. He is able to break down complex problems into solvable pieces, can manage a team and has no problem picking up the phone to find an answer he needs" <br><cite>Alyssa Richard</cite></p></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end of testimony section -->
+
+
+
 <!-- Start of projects  -->
     <section class="projects" id="my-projects">
       <div class="row">
         <div class="recent-projects-head">
-          <h3>Recent Work</h3>
-          <p>These are some of the latest projects I have worked on, to see more visit my <a href="http://github.com/arovillard">GitHub.</a></p>
+          <a href="https://github.com/arovillard?tab=repositories" target="_blank"><h3>Recent Work</h3></a>
+          <p>These are some of the latest projects I have worked on, to see more visit my <a href="http://github.com/arovillard" target="_blank">GitHub.</a></p>
         </div>
       </div>
 
@@ -126,7 +155,7 @@
   <!-- end of projects -->
   <section class="lets-chat">
     <div class="row">
-          <div class="recent-projects-head">
+          <div class="lets-chat-head">
             <p>Think we might be perfect for each other?</p>
             <a href="mailto:arovillard@gmail.com"><h3>Let's Chat</h3></a>
           </div>
@@ -142,7 +171,7 @@
               <a href="mailto:arovillard@gmail.com"><img src="http://i745.photobucket.com/albums/xx99/arovillard/email_icn_60x60_zps6b67350d.png"></a>
             </li>
             <li>
-              <a href="http://github.com/arovillard"><img src="http://i745.photobucket.com/albums/xx99/arovillard/github_icn_60x60_zpsf07d4ca7.png"></a>
+              <a href="https://github.com/arovillard?tab=repositories"><img src="http://i745.photobucket.com/albums/xx99/arovillard/github_icn_60x60_zpsf07d4ca7.png"></a>
             </li>
             <li>
               <a href="http://www.tumblr.com/blog/arovillard"><img src="http://i745.photobucket.com/albums/xx99/arovillard/tumblr_icn_60x60_zps6d826bbd.png"></a>
@@ -206,9 +235,9 @@
             $target = $target.length && $target
             || $('[name=' + this.hash.slice(1) +']');
             if ($target.length) {
-              var targetOffset = $target.offset().top;
+              var targetOffset = $target.offset().top - 65;
               $('html,body')
-              .animate({scrollTop: targetOffset}, 1100);
+              .animate({scrollTop: targetOffset}, 1300);
              return false;
             }
           }
